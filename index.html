@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>ReinaBijou | Calculator</title>
+    <meta charset="utf-8">
+    <meta name="viewport",content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <nav>
+      <div class="nav-wrapper title">
+        &nbsp;&nbsp;&nbsp;&nbsp;Vanzare
+      </div>
+    </nav>
+    <div class="row">
+      <div class="col s10 offset-s1 z-depth-3">
+        <div class="container">
+          <div class="row">
+            <br>
+            <form class="col s12">
+              <div class="input-field col s10  16">
+                <label class="label">Cantitate bijuterie noua:</label>
+                <input class="input" type="text" id="cantBij" name="cantBij">
+                <br>
+              </div>
+              <div class="input-field col s2  16">
+                <label>g</label>
+              </div>
+              <div class="select-field col s10  16">
+                <label>Aur la schimb?</label>
+                <select class="browser-default select" id="isSchimb" name="isSchimb" onchange="ableSchimb()">
+                  <option value="1">Nu</option>
+                  <option value="2">Da</option>
+                </select>
+                <br>
+              </div>
+              <div class="input-field col s10  16">
+                <label>Cantitate la schimb: </label>
+                <input class="input" type="text" id="cantSchimb" name="cantSchimb" disabled>
+                <br>
+              </div>
+              <div class="input-field col s2  16">
+                <label>g</label>
+              </div>
+              <div class="select-field col s10  16">
+                <label>Karate:</label>
+                <select class="browser-default select" id="tipSchimb" name="tipSchimb" disabled>
+                  <option value="1">18k</option>
+                  <option value="2">14k</option>
+                </select>
+                <br>
+              </div>
+              <div class="input-field col s12  16">
+                <input type="button" value="Calculeaza" onclick="calcCumpSchimb()">
+              </div>
+            </form>
+          </div>
+        </div>
+      <div id="rezCumpSchimb"></div>
+
+    <script src="functions.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+      var elem = document.querySelector('.sidenav');
+      var instance = new M.Sidenav(elem);
+      $(document).ready(function(){
+        $('.sidenav').sidenav();
+      });
+    </script>
+  </body>
+</html>
